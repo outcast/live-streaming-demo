@@ -1,4 +1,4 @@
-# CDN-Demo
+# Live Streaming Demo
 
 Author: James Jones <jam.jones@nginx.com>
 
@@ -30,7 +30,7 @@ Author: James Jones <jam.jones@nginx.com>
 
 ### To Deploy
   1. `./deploy.sh`
-  2. Once it is complete ssh to origin and run `sudo apt-mirror` *note: it may take a while*
+
 
 ### To Destroy
   `./destroy.sh`

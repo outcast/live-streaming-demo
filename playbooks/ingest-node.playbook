@@ -1,0 +1,21 @@
+---
+- name: Setup Nginx RTMP Ingest node
+  hosts: ingest
+  tasks:
+  - name: Default playbook
+    include: default.playbook
+
+  - name: Install RTMP module
+    package:
+      name:
+      - nginx-plus-module-rtmp
+      state: latest
+
+  - name: Install Nginx RTPM Ingest config
+    copy:
+      src: ../configs/nginx/ingest.conf
+      dest: /etc/nginx/nginx.conf
+      mode: '0644'
+
+  - name: Default playbook
+    include: nginx-reload.playbook

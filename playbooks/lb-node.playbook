@@ -1,0 +1,15 @@
+---
+- name: Setup Nginx Stream LB Node
+  hosts: lb
+  tasks:
+  - name: Default playbook
+    include: default.playbook
+
+  - name: Install Nginx Stream LB config
+    copy:
+      src: ../configs/nginx/lb.conf
+      dest: /etc/nginx/nginx.conf
+      mode: '0644'
+
+  - name: Default playbook
+    include: nginx-reload.playbook

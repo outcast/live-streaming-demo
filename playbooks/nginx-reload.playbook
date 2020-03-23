@@ -1,0 +1,5 @@
+---
+- name: Start service nginx, if not started or reload
+  service:
+    name: nginx
+    state: reloaded

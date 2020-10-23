@@ -5,7 +5,7 @@ data "digitalocean_ssh_key" "ssh_keys" {
 
 
 data "http" "myip" {
-  url = "http://ipv4.icanhazip.com"
+  url = "https://ipv4.icanhazip.com"
 }
 
 data "template_file" "ansible_nodes_conf" {

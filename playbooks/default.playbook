@@ -1,5 +1,5 @@
 ---
-- name: Install dependancies
+- name: Install dependencies
   package:
     name:
     - apt-transport-https
